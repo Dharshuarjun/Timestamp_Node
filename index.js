@@ -4,9 +4,6 @@ const app = express();
 const date= new Date();
 const dotenv= require("dotenv").config();
 
-
-
-
 app.get("/createtimestamp",function (req,res){
     fs.writeFile(`./${date.getDate()}-${date.getMonth()}-${date.getFullYear()}-${date.getHours()}.txt`,`Date:${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} 
     timestamp : ${new Date()}`,(err)=>{
